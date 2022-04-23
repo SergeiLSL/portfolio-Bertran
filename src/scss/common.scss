@@ -2,6 +2,7 @@
 //===============================================
 .page { // отступ для всех трех страниц
 	//padding-top: rem(90);
+	font-family: "Heebo";
 	flex: 1 1 auto;
 	@include adaptiveValue("padding-top", 90, 0);
 	@media (max-width:$mobile){
