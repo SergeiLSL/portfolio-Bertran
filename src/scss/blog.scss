@@ -1,0 +1,61 @@
+.page {
+	// .page__container
+	&__container {
+	}
+}
+
+.blog {
+	@include adaptiveValue("padding-bottom", 50, 30);
+	// .blog__title
+	&__title {
+		@include adaptiveValue("margin-bottom", 50, 20);
+	}
+	// .blog__subtitle
+	&__subtitle {
+		@include adaptiveValue("font-size", 30, 26);
+		font-weight: 500;
+		display: inline-block;
+		line-height: math.div( 44, 30);
+		color: inherit;
+		margin-bottom: rem(10);
+		transition: all 0.3s ease 0s;
+		@media (min-width: $tablet) {
+			&:hover {
+				color: #FF6464;
+			}
+		}
+	}
+	// .blog__items
+	&__items {
+	}
+	// .blog__item
+	&__item {
+		border-bottom: rem(1) solid #e0e0e0;
+		@include adaptiveValue("padding-bottom", 30, 25);
+		@include adaptiveValue("margin-bottom", 30, 25);
+		&:last-child {// кроме последнего объекта отступ 30
+			margin-bottom: 0;
+		}
+	}
+	// .blog__info
+	&__info {
+		display: flex;
+		@include adaptiveValue("font-size", 20, 16);
+		margin-bottom: rem(10);
+	}
+	// .blog__data
+	&__data {
+	}
+	// .blog__separator
+	&__separator {
+		margin: 0 rem(15);
+	}
+	// .blog__categoru
+	&__category {
+		color: $Light;
+	}
+	// .blog__text
+	&__text {
+	}
+}
+
