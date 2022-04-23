@@ -1,20 +1,20 @@
-.article {
+.work-detail {
 	max-width: rem(700);
 	padding: 0 rem(10) rem(30);
 	margin: 0 auto;
-	// .article__title
+	// .work-detail__title
 	&__title {
 		@include adaptiveValue("font-size", 34, 30);
 		font-weight: 700;
 		line-height: math.div( 50, 34);
 		margin-bottom: rem(30);
 	}
-	// .article__info
+	// .work-detail__info
 	&__info {
 		display: flex;
 		margin-bottom: rem(20);
 	}
-	// .article__year
+	// .work-detail__year
 	&__year {
 		background: $Primary;
 		border-radius: rem(16);
@@ -27,14 +27,14 @@
 		align-items: center;
 		color: #fff;
 	}
-	// .article__category
+	// .work-detail__category
 	&__category {
 		align-self: center;
 		@include adaptiveValue("font-size", 20, 18);
 		line-height: math.div( 25, 20);
 		margin-left: rem(25);
 	}
-	// .article__text
+	// .work-detail__text
 	&__text {
 		p { // притянули стили из класса text
 			@extend .text;
@@ -46,7 +46,7 @@
 		}
 
 	}
-	// .article__image-ibg
+	// .work-detail__image-ibg
 	&__image-ibg {
 	}
 }

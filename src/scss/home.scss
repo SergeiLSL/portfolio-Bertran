@@ -70,21 +70,21 @@
 //====== finish about =========================================
 //===============================================
 //====== start posts =========================================
-.posts {
+.recent-posts {
 	background: #EDF7FA;
 	padding: rem(25) 0 rem(13) 0; // уменьшим на 17px items__column margin-bottom: rem(17);
 	@media (max-width:$mobile){
 		padding: rem(25) 0 rem(23) 0;
 	}
-	// .posts__container
+	// .recent-posts__container
 	&__container {
 	}
-	// .posts__header
+	// .recent-posts__header
 	&__header {
 		display: flex;
 		margin-bottom: rem(20);		
 	}
-	// .posts__title
+	// .recent-posts__title
 	&__title {
 		padding-right: rem(20); // на всякий случай, если заголовок будет большой
 		flex: 1 1 auto; //почему- считает, что это лучше, чем justify-content: space-between; в header
@@ -93,7 +93,7 @@
 			padding-right: 0;  
 		}
 	}
-	// .posts__view-all
+	// .recent-posts__view-all
 	&__view-all {
 		//white-space: nowrap; // на всякий случай? что не ломался текст
 		flex: 0 0 auto; //альтернатива white-space: nowrap; запрещяем уменьшаться объекту
@@ -104,26 +104,26 @@
 			display: none; 
 		}
 	}
-	// .posts__contents
-	&__contents {
+	// .recent-posts__items
+	&__items {
 		//display: flex; // если использовать min-width:$mobile, можно перенести туда
 		margin: 0 rem(-10);
 		@media (min-width:$mobile){
 			display: flex;
 		}
 	}
-	// .posts__column
+	// .recent-posts__column
 	&__column {
 		flex: 0 1 50%;
 		padding: 0 rem(10);
 		margin-bottom: rem(17);
 	}
-	// .posts__content
+	// .recent-posts__item
 	&__item {
 	}
 }
 
-.content-posts {
+.recent-post {
 	height: 100%; // чтобы колонки были одинаковые по высоте
 	background-color: #fff;
 	box-shadow: 0 rem(4) rem(10) rgba(187, 225, 250, 0.25);
@@ -132,7 +132,7 @@
 	*:last-child {// у любого последнего объекта отступ ноль
 		margin-bottom: rem(0);
 	}
-	// .content-posts__title
+	// .recent-post__title
 	&__title {
 		display: inline-block;
 		color: inherit;
@@ -147,7 +147,7 @@
 			}
 		}	
 	}
-	// .content-posts__info
+	// .recent-post__info
 	&__info {
 		@include adaptiveValue("margin-bottom", 15, 10);
 		@include adaptiveValue("font-size", 18, 16);
@@ -156,7 +156,7 @@
 			margin: 0 rem(10);
 		}
 	}
-	// .content-posts__text
+	// .recent-post__text
 	&__text {
 		@include adaptiveValue("margin-bottom", 15, 10);
 	}
