@@ -23,6 +23,7 @@
 		@include adaptiveValue("padding-right", 110, 50);
 		@media (max-width: $mobile) {
 			padding-right: 0;
+			margin: 0 auto;
 		}	
 		flex: 1 1 auto; //разрешаем уменьшаться/увеличиваться тексту в случае, если убрать картинку
 		*:last-child { // убираем нижний отступ у последнего элемента, неважно какой тег он имеет
@@ -46,19 +47,22 @@
 		@include adaptiveValue("margin-bottom", 25, 20);
 	}
 	// .about__avatar
+	&__image {
+		margin-bottom: rem(35);
+	}
 	&__avatar {		
 		flex: 0 0 rem(243); //запрещаем уменьшаться/увеличиваться и базовая ширина		
 		height: rem(243);
 		border-radius: 50%;
-		box-shadow: rem(-5) rem(13) 0 0 #edf7fa; // еунь вокруг фото
+		box-shadow: rem(-5) rem(13) 0 0 #edf7fa; // тень вокруг фото
 		img {
 			max-width: 100%;			
 		}
 		@media (max-width: $mobile) {
-			flex: 0 0 rem(170); 
-			width: rem(170);
-			height: rem(170);
-			margin: 0 0 rem(40) 0; 
+			flex: 1 1 rem(200); 
+			width: rem(200);
+			height: rem(200);
+			text-align: center; 
 		}
 		
 	}
