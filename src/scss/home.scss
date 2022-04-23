@@ -159,6 +159,32 @@
 }
 //====== finish posts =========================================
 //===============================================
-//====== start posts =========================================
-
-//====== start posts =========================================
+//====== start works =========================================
+.featured-works {
+	padding: rem(30) 0 rem(80) 0;
+	@media (max-width:$mobile){
+		padding: rem(30) 0 rem(30) 0; 
+	}
+	// .featured-works__container
+	&__container {
+	}
+	// .featured-works__title
+	&__title {
+		margin-bottom: rem(20);
+	}
+	// .featured-works__items
+	&__items {
+		@media (max-width:$mobile){
+			display: flex; //чтобы остался один item
+			overflow: auto; // появляется горизонтальная прокрутка на мобилках, чтобы листать item
+			//чтобы остался один item
+			.works__item {
+				flex: 0 0 90%; 
+				margin: 0 rem(15) 0 0;
+			}
+		}
+	}
+}
+// все, что касается блока works расположено в файле works.scss,
+// так как у нас есть отдельная страница works
+//====== start works =========================================

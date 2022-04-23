@@ -1,0 +1,84 @@
+.works {
+	
+	&__items {
+		@include adaptiveValue("margin-bottom", 60,30);
+	}
+	&__main-title {
+		@include adaptiveValue("margin-bottom", 45,20);
+	}
+	// .works__item
+	&__item {
+		padding-bottom: rem(30);
+		margin-bottom: rem(30);
+		border-bottom: rem(1) solid #e0e0e0;
+		&:last-child {// кроме последнего объекта отступ 30
+			margin-bottom: 0;
+		}
+		@media (min-width:$mobile){// все что больше $mobile
+			display: flex;
+			align-items: flex-start; // прижмем к верху все элементы, чтобы ничего не нарушилось, при большом тексте
+		}
+	}
+	// .works__image
+	&__image-ibg {// при использовании класса ibg?мы можем вставлять абсолютно любую картинку по размеру
+		flex: 0 0 rem(246);
+		display: block; //при сужении меньше $mobile картинка равернется на всю ширину
+		border-radius: rem(6);
+		min-height: rem(180);
+		overflow: hidden; // чтобы картинка была адаптивной и увеличим размер высоты
+		@media (max-width:$mobile){ // чтобы картинка была адаптивной и увеличим размер высоты
+			margin-bottom: rem(17);
+			padding-bottom: 60%; 
+		}
+	}
+	// .works__body
+	&__body {
+		flex: 1 1 auto;
+		@media (min-width:$mobile){
+			padding-left: rem(18);  
+		}
+	}
+	// .works__title
+	&__title {
+		display: inline-block;
+		color: inherit;
+		@include adaptiveValue("font-size", 30, 24);
+		line-height: math.div(44, 30);
+		font-weight: 700;
+		margin-bottom: rem(15);
+		transition: all 0.3s ease 0s;
+		@media (min-width: $tablet) {
+			&:hover {
+				color: $Primary;
+			}
+		}
+	}
+	// .works__info
+	&__info {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(15);
+	}
+	// .works__year
+	&__year {
+		background-color: $Dark; 
+		border-radius: rem(16);
+		height: rem(25);
+		padding: 0 rem(10);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		font-size: rem(18);
+		font-weight: 900;
+	}
+	// .works__category
+	&__category {
+		color: $Light;
+		font-size: rem(20);
+		margin-left: rem(25);
+	}
+	// .works__text
+	&__text {
+	}
+}
