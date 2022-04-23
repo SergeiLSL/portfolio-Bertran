@@ -1,160 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"trenirovka 2"
+"title":"portfolio Bertran"
 })
 
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
-		<main class="page">			
-			<section data-watch="navigator" class="inet">
-				<div class="inet__foto">
-					<picture>
-						<source srcset="@img/inet/stars-big.jpg" type="image/jpeg" media="(min-width: 1219px)">
-						<source srcset="@img/inet/stars.jpg" type="image/jpeg" media="(max-width: 1219px)">
-						<img src="@img/inet/stars.jpg" class="hero__image" alt="cover">
-						<div class="inet__text">
-							PiperNet Is Here
+		<main class="page">
+			<section data-watch="navigator" class="about main__section_1">
+				<div class="about__container">
+					<div class="about__content">
+						<h1 class="about__title title">Hi, I am John Doe,<br>Creative Technologist</h1>
+						<div class="about__text text">
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+							consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
 						</div>
-					</picture>
-				</div>
-			</section>
-			<section data-watch="navigator" class="problem">
-				<div class="problem__container">
-					<div class="problem__content">
-						<div class="problem__title title">
-							The Problem
-						</div>
-						<div class="problem__text">
-							<p>Beneath the flashy homepages of your favorite sites lurk Hooli™ and other evil
-								corporations out to hoard and sell your most personal data.
-							</p>
-							<p>
-								What was built to be the ultimate platform for the free sharing of knowledge has
-								turned
-								into a money-hungry monster feasting on our privacy and freedom.
-							</p>
-							<p>
-								But fear not, for Pied Piper has the answer! And it’s simple:<br>
-								An autonomous peer-to-peer network featuring distributed storage powered by
-								universal
-								compression, accelerated scheduling llocation, and end-to-end encryption.
-							</p>
-							<p>Put even simpler — <b>it’s the internet, completely decentralized.</b></p>
-							</blockquote>
-						</div>
+						<a href="" class="about__btn btn">Download Resume</a>
 					</div>
+					<img class="about__avatar" src="@img/about/01.jpg" alt="">
 				</div>
 			</section>
-			<section data-watch="navigator" class="hero">
-				<div class="hero__foto">
-					<picture>
-						<source srcset="@img/hero/hero-big.jpg" type="image/jpeg" media="(min-width: 1219px)">
-						<source srcset="@img/hero/hero.jpg" type="image/jpeg" media="(max-width: 1219px)">
-						<img src="@img/hero/hero.jpg" class="hero__image" alt="cover">
-						<div class="hero__text">
-							We’re in this together! All of our computers and phones join in a
-							network to make the strongest supercomputer the world has ever seen
-						</div>
-					</picture>
-				</div>
-			</section>
-			<section data-watch="navigator" class="ippc">
-				<div class="ippc__container">
-					<div class="ippc__content">
-						<div class="ippc__title title">
-							Introducing PiedPiperCoin
-						</div>
-						<img src="img/ippc/logo.png" alt="logo" class="ippc__circle">
-						<p>Pied Piper's new internet is built <span>for users, by users</span>.<br>
-							You supply the storage, compute, and netheroing resources that power our entire
-							decentralized web.
-						</p>
-						<p>
-							Now there's a way to give credit where credit is due. Compute credit, that is!
-							The more you share your device resources, the more PiedPiperCoin you receive.
-						</p>
-						<p>
-							Whether you're a developer with an app ready for market, or just an Average
-							Joe witha
-							smartphone you'll love all you can do with PiedPiperCoin.
-						</p>
+			<section data-watch="navigator" class="posts main__section_2">
+				<div class="posts__container">
+					<div class="posts__header">
+						<div class="posts__title title-posts">Recent posts</div>
+						<a href="" class="posts__view-all">View all</a>
 					</div>
-				</div>
-			</section>
-			</section>
-			<section data-watch="navigator" class="team">
-				<div class="team__container">
-					<div class="team__title title">
-						The Team
-					</div>
-					<div class="team__row">
-						<div class="team__column">
-							<div class="team__item">
-								<img class="team__image" src="img/team/01.jpg" alt="" />
-								<div class="team__name">
-									Richard Hendricks
+					<div class="posts__contents">
+						<div class="posts__column">
+							<article class="posts__content content-posts">
+								<a href="" class="content-posts__title">Making a design system from scratch</a>
+								<div class="content-posts__info">12 Feb 2020 <span>|</span> Design, Pattern</div>
+								<div class="content-posts__text text">
+									Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+									officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+									amet.
 								</div>
-								<div class="team__position">
-									Founder & CEO
-								</div>
-							</div>
+							</article>
 						</div>
-						<div class="team__column">
-							<div class="team__item">
-								<img class="team__image" src="img/team/02.jpg" alt="" />
-								<div class="team__name">
-									Dinesh Chugtai
+						<div class="posts__column">
+							<article class="posts__content content-posts">
+								<a href="" class="content-posts__title">Creating pixel perfect icons in Figma</a>
+								<div class="content-posts__info">12 Feb 2020 <span>|</span> Figma, Icon Design</div>
+								<div class="content-posts__text text">
+									Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+									officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+									amet.
 								</div>
-								<div class="team__position">
-									Senior Programmer
-								</div>
-							</div>
-						</div>
-						<div class="team__column">
-							<div class="team__item">
-								<img class="team__image" src="img/team/03.jpg" alt="" />
-								<div class="team__name">
-									Bertram Gilfoyle
-								</div>
-								<div class="team__position">
-									Chief Systems Architect
-								</div>
-							</div>
-						</div>
-						<div class="team__column">
-							<div class="team__item">
-								<img class="team__image" src="img/team/04.jpg" alt="" />
-								<div class="team__name">
-									Jared Dunn
-								</div>
-								<div class="team__position">
-									Chief Operating Officer
-								</div>
-							</div>
-						</div>
-						<div class="team__column">
-							<div class="team__item">
-								<img class="team__image" src="img/team/05.jpg" alt="" />
-								<div class="team__name">
-									Monica Hall
-								</div>
-								<div class="team__position">
-									Chief Financial Officer
-								</div>
-							</div>
-						</div>
-						<div class="team__column">
-							<div class="team__item">
-								<img class="team__image" src="img/team/06.jpg" alt="" />
-								<div class="team__name">
-									Nelson Bighetti
-								</div>
-								<div class="team__position">
-									Majority Investor
-								</div>
-							</div>
+							</article>
 						</div>
 					</div>
 				</div>

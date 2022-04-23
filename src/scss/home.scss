@@ -1,199 +1,164 @@
-//====================================================================================================
-.inet {
-	position: relative;
-	margin: 0 auto;
-	padding-top: rem(84);
-	color: #fff;
-	font-weight: 500;
-	line-height: math.div(84, 72);
-	// .contacts__foto
-	&__foto {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		background-position: center;
-		background-size: cover;
-		position: relative;
-		background-repeat: no-repeat;
-		text-align: center;
+//====== start about =========================================
+.about {
+	padding: rem(38) 0 rem(70) 0; // добавим к общему отступу page rem(38), т.к здесь отступ больше
+	background-color: #ebf7d0; // не забыть убрать
+	justify-content: center;
+	@media (max-width: $mobile) {
+		padding: 0 0 rem(60) 0;	// что-то не так
+	}//
+	@media (max-width: $mobile) {
+		padding: rem(30) 0 rem(50) 0;
 	}
-	// .contacts__image
-	&__image {
-		width: 100%;
-	}
-	// .contacts__text
-	&__text {
-		position: absolute;
-		background: rgba(0, 0, 0, 0);
-		width: 100%;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-		@include adaptiveValue("font-size", 72, 36);
-	}
-}
-//====================================================================================================
-.problem {
-	background-color: #eeeeee;
-	@include adaptiveValue("padding-top", 48, 30);
-	@include adaptiveValue("padding-bottom", 92, 30);
-	// .problem__container
+	// .about__container
 	&__container {
+		display: flex;	
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;	
+			text-align: center;	
+		}
 	}
-	// .problem__content
-	&__content {
+	// .about__content
+	&__content {		
+		align-items: flex-start; //отступ заголовка, чуть ниже уровня фото	
+		@include adaptiveValue("padding-right", 110, 50);
+		@media (max-width: $mobile) {
+			padding-right: 0;
+		}	
+		flex: 1 1 auto; //разрешаем уменьшаться/увеличиваться тексту в случае, если убрать картинку
+		*:last-child { // убираем нижний отступ у последнего элемента, неважно какой тег он имеет
+			margin-bottom: rem(0);
+		}
 	}
-	// .problem__body
-	&__body {
-	}
-	// .problem__title
+	// .about__title
 	&__title {
-	}
-	// .problem__text
-	&__text {
-	}
-}
-//=================================================================
-//=====================================================================
-.hero {
-	position: relative;
-	margin: 0 auto;
-	color: #fff;
-	font-weight: 500;
-	line-height: math.div(84, 72);
-	// .contacts__foto
-	&__foto {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		background-position: center;
-		background-size: cover;
-		position: relative;
-		background-repeat: no-repeat;
-		text-align: center;
-	}
-	// .contacts__image
-	&__image {
-		width: 100%;
-	}
-	// .contacts__text
-	&__text {
-		position: absolute;
-		background: rgba(0, 0, 0, 0);
-		width: 100%;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-		@include adaptiveValue("font-size", 48, 18);
-		@include adaptiveValue("padding-left", 163, 20);
-		@include adaptiveValue("padding-right", 163, 20);
-	}
-}
-//==============================================================
-//========================================================================================================================================================
-//++++++++++++++
-.ippc {
-	background-color: #fff;
-	@include adaptiveValue("padding-top", 48, 30);
-	@include adaptiveValue("padding-bottom", 92, 30);
-	// .ippc__container
-	&__container {
-	}
-	// .ippc__content
-	&__content {
-	}
-	// .ippc__title
-	&__title {
-	}
-	// .ippc__circle
-	&__circle {
-		float: left;
-		shape-outside: circle(50%);
-		width: rem(115);
-		height: rem(115);
-		@include adaptiveValue("margin-right", 48, 20);
-		@include adaptiveValue("margin-bottom", 25, 0);
-	}
-}
-//========================================================================================================================================================
-//===== start contact =======================
+		@include adaptiveValue("margin-bottom", 25, 20);
 
-//===== finish contact =======================
-//================================================================
-.team {
-	background-color: #eeeeee;
-	@include adaptiveValue("padding-top", 48, 30);
-	@include adaptiveValue("padding-bottom", 65, 10);
-	// .team__container
-	&__container {
 	}
-	// .team__title
-	&__title {
+	// .about__text
+	&__text {		
+		@include adaptiveValue("margin-bottom", 35, 25);
+		@media (max-width:$mobile){
+			padding: 0 rem(15); 
+		}
 	}
-	// .team__row
-	&__row {
-		display: flex;
-		margin: 0px rem(-15);
-		flex-wrap: wrap;
-		justify-content: center;
+	// .about__btn
+	&__btn { // на всякий случай, если кнопку переставить в другое место
+		@include adaptiveValue("margin-bottom", 25, 20);
 	}
-	// .team__column
-	&__column {
-		padding: 0 rem(15);
-		flex: 0 1 33.333%;
-		display: flex;
-		/*колонки становятся одинаковые по высоте - по самой высокой*/
-		margin-bottom: rem(20);
-		@media (max-width: $tablet) {
-			flex: 0 1 50%;
-			width: 100%;
-			margin-bottom: rem(40);
+	// .about__avatar
+	&__avatar {		
+		flex: 0 0 rem(243); //запрещаем уменьшаться/увеличиваться и базовая ширина		
+		height: rem(243);
+		border-radius: 50%;
+		box-shadow: rem(-5) rem(13) 0 0 #edf7fa; // еунь вокруг фото
+		img {
+			max-width: 100%;			
 		}
 		@media (max-width: $mobile) {
-			flex: 0 1 100%;
-			width: 100%;
+			flex: 0 0 rem(170); 
+			width: rem(170);
+			height: rem(170);
+			margin: 0 0 rem(40) 0; 
 		}
-	}
-	// .team__item
-	&__item {
-		margin: 0 auto;
-		padding: 24px 0px 28px 0px;
-		text-align: center;
-	}
-	// .team__image
-	&__image {
-		margin: 0px 0px 12px 0px;
-		/*отступ name от img */
-		text-align: center;
-		height: 168px;
-		width: 168px;
-		border-radius: 50%;
-		img {
-			width: 100%;
-		}
-		@media (max-width: $tablet) {
-			width: 100%;
-			height: 100%;
-		}
-	}
-
-	// .team__name
-	&__name {
-		font-size: rem(24);
-		line-height: math.div(28, 24);
-		font-weight: 600;
-		color: $mainColorText;
-		margin-bottom: rem(2);
-		//text-align: center;
-	}
-	// .team__position
-	&__position {
-		font-style: italic;
-		font-size: rem(18);
-		line-height: math.div(21, 18);
-		color: #000;
-		//text-align: center;
+		
 	}
 }
+//====== finish about =========================================
+//===============================================
+//====== start posts =========================================
+.posts {
+	background: #EDF7FA;
+	padding: rem(25) 0 rem(13) 0; // уменьшим на 17px items__column margin-bottom: rem(17);
+	@media (max-width:$mobile){
+		padding: rem(25) 0 rem(23) 0;
+	}
+	// .posts__container
+	&__container {
+	}
+	// .posts__header
+	&__header {
+		display: flex;
+		margin-bottom: rem(20);		
+	}
+	// .posts__title
+	&__title {
+		padding-right: rem(20); // на всякий случай, если заголовок будет большой
+		flex: 1 1 auto; //почему- считает, что это лучше, чем justify-content: space-between; в header
+		font-size: rem(22);
+		@media (max-width:$mobile){
+			padding-right: 0;  
+		}
+	}
+	// .posts__view-all
+	&__view-all {
+		//white-space: nowrap; // на всякий случай? что не ломался текст
+		flex: 0 0 auto; //альтернатива white-space: nowrap; запрещяем уменьшаться объекту
+		font-size: rem(16);
+		line-height: math.div(23, 16);
+		color: #00a8cc;
+		@media (max-width:$mobile){
+			display: none; 
+		}
+	}
+	// .posts__contents
+	&__contents {
+		//display: flex; // если использовать min-width:$mobile, можно перенести туда
+		margin: 0 rem(-10);
+		@media (min-width:$mobile){
+			display: flex;
+		}
+	}
+	// .posts__column
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 rem(10);
+		margin-bottom: rem(17);
+	}
+	// .posts__content
+	&__item {
+	}
+}
+
+.content-posts {
+	height: 100%; // чтобы колонки были одинаковые по высоте
+	background-color: #fff;
+	box-shadow: 0 rem(4) rem(10) rgba(187, 225, 250, 0.25);
+	border-radius: rem(4);
+	@include adaptiveValue("padding", 20, 15);
+	*:last-child {// у любого последнего объекта отступ ноль
+		margin-bottom: rem(0);
+	}
+	// .content-posts__title
+	&__title {
+		display: inline-block;
+		color: inherit;
+		@include adaptiveValue("font-size", 26, 22);
+		font-weight: 700;
+		line-height: math.div(38, 26);
+		transition: color 0.3s ease 0s;
+		@include adaptiveValue("margin-bottom", 17, 10);
+		@media (min-width: $tablet) { // этот hover нужен на устройствах больше планшета
+			&:hover {
+				color: $Primary;
+			}
+		}	
+	}
+	// .content-posts__info
+	&__info {
+		@include adaptiveValue("margin-bottom", 15, 10);
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: math.div(26, 18);
+		span {
+			margin: 0 rem(10);
+		}
+	}
+	// .content-posts__text
+	&__text {
+		@include adaptiveValue("margin-bottom", 15, 10);
+	}
+}
+//====== finish posts =========================================
+//===============================================
+//====== start posts =========================================
+
+//====== start posts =========================================

@@ -1,30 +1,54 @@
 // Заголовки, общие БЄМ блоки и проче...
-// Заголовки, общие БЄМ блоки и проче...
-._container {
-	//@include adaptiveValue("padding-left", 54.5, 15);
-	//@include adaptiveValue("padding-right", 54.5, 15);
-	//@include adaptiveValue("padding-top", 48, 10);
-	//@include adaptiveValue("padding-bottom", 92, 50);
-}
-
-//===========================================
-// Заголовок секкции
-.title {
-	font-weight: 500;
-	@include adaptiveValue("font-size", 64, 36);	
-	@include adaptiveValue("font-size", 75, 40);
-	text-align: center;
-	color: $mainColorText;
-	@include adaptiveValue("margin-bottom", 32, 15);
-}
-//===========================================
-// Текст в секкции
-p {
-	@include adaptiveValue("font-size", 32, 20);	
-	line-height: math.div(37.5, 32);
-	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 40, 20);
+//===============================================
+.page { // отступ для всех трех страниц
+	//padding-top: rem(90);
+	flex: 1 1 auto;
+	@include adaptiveValue("padding-top", 90, 0);
+	@media (max-width:$mobile){
+		//padding-top: rem(0); 
 	}
 }
 
+.title {
+	font-size: rem(44);	
+	line-height: math.div(60, 44);	
+	font-weight: 700;
+	@include adaptiveValue("font-size", 44, 32);
+}
 
+.text {
+	font-size: rem(16);	
+	line-height: math.div(23, 16);	
+}
+
+.btn {
+	background-color: $Primary;
+	border-radius: rem(2);
+	font-weight: 500;
+	font-size: rem(20);
+	color: #fff;
+	line-height: math.div(29, 20);
+	height: rem(47);
+	display: inline-flex; // чтобы кнопка не была на всю ширину контейнера
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 rem(20);
+	transition: background 0.3s ease 0s;
+	@media (min-width: $tablet) {
+		&:hover {
+			background-color: #bb4949;
+		}
+	}
+	&._fw {// что это такое???
+		width: 100%;
+	}
+}
+
+.title-posts {
+	font-size: rem(22);
+	@media (max-width:$mobile){
+		text-align: center;
+		font-size: rem(18); 
+	}
+}
