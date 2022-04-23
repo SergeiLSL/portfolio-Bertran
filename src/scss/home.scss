@@ -1,7 +1,7 @@
 //====== start about =========================================
 .about {
 	padding: rem(38) 0 rem(70) 0; // добавим к общему отступу page rem(38), т.к здесь отступ больше
-	background-color: #ebf7d0; // не забыть убрать
+	//background-color: #ebf7d0; // не забыть убрать
 	justify-content: center;
 	@media (max-width: $mobile) {
 		padding: 0 0 rem(60) 0;	// что-то не так
